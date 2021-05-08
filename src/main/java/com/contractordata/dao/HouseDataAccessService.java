@@ -25,8 +25,8 @@ public class HouseDataAccessService implements HouseDao {
 		final String sql = "INSERT INTO house (house_uuid, address, size, amount_paid) "
 				+ "VALUES (?, ?, ?, ?)";
 		String address = house.getAddress();
-		String size = Integer.toString(house.getSize());
-		String amountPaid = Double.toString(house.getAmountPaid());
+		int size = house.getSize();
+		double amountPaid = house.getAmountPaid();
 		
 		return jdbcTemplate.update(sql, new Object[] {houseId, address, size, amountPaid});
 	}
