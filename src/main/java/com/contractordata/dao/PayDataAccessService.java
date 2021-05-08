@@ -71,7 +71,7 @@ public class PayDataAccessService implements PayDao {
 
 	@Override
 	public int updatePayment(UUID id, Pay pay) {
-		final String sql = "UPDATE pay SET house_uuid = ?, employee_uuid = ?, amount_paid = ?,"
+		final String sql = "UPDATE pay SET house_uuid = ?, employee_uuid = ?, amount_paid = ?"
 				+ " WHERE pay_uuid = ?";
 		UUID houseId = pay.getHouseId();
 		UUID employeeId = pay.getEmployeeId();
