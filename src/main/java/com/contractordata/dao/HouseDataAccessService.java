@@ -77,7 +77,7 @@ public class HouseDataAccessService implements HouseDao {
 		int size = house.getSize();
 		double amountPaid = house.getAmountPaid();
 		
-		return jdbcTemplate.update(sql, new Object[] { address, size, amountPaid });
+		return jdbcTemplate.update(sql, new Object[] { address, size, amountPaid, id});
 	}
 	
 	public JdbcTemplate getJdbcTemplate() {
